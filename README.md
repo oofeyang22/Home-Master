@@ -1,1 +1,1 @@
-This is a landing page for a fictitious company that offers Cleaning services. I used the Next.js framework for the project.
+This is a landing page for a fictitious company that offers Cleaning services. I used the Next.js framework for the project. You can check out the project using this [link](https://home-master-xi.vercel.app/).
