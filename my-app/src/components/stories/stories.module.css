@@ -1,0 +1,58 @@
+.container{
+    margin-top: 40px;
+    display: flex;
+    gap: 100px;
+    padding: 0 2.5rem;
+}
+
+.imgContainer{
+    position: relative;
+}
+.img1, .img2{
+    border-radius: 15px;
+}
+.img2{
+    position: absolute;
+    bottom: -40px;
+    left: 100px;
+    right: 2px;
+    rotate: 10deg;
+}
+
+.storyContainer{
+    margin-top: 40px;
+}
+
+.title{
+    font-weight: bold;
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+.points{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.text{
+    margin-bottom: 40px;
+    font-size: 16px;
+}
+
+
+.bold{
+    font-weight: 600;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}

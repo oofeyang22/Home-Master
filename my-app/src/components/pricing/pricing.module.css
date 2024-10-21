@@ -1,0 +1,106 @@
+.container{
+    background-color: #f1f0f0;
+    padding: 0 1.5rem;
+
+}
+.boxContainer{
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.boxContainer:hover{
+  background-color: green;
+  color: white;
+}
+.grid{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  margin-top: 40px;
+
+}
+.title{
+  margin-bottom: 20px;
+}
+.toggleFlex{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.toggleGroup {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  .toggleButton {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  .toggleButton.active {
+    background-color:rgb(211, 53, 14);
+    color: white;
+  }
+
+  .icon{
+    background-color: #ebe4e4;
+    padding: 10px;
+    border-radius: 50%;
+    text-align: center;
+    border: 10px solid #8b8787
+  }
+
+  .boxContainer:hover .icon{
+    background-color: black;
+
+  }
+
+  .priceChange{
+    margin-bottom: 20px;
+  }
+  .price{
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .pricePeriod{
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .button{
+    border: none;
+    background-color: rgb(211, 53, 14);
+    padding: 15px;
+    color: white;
+    cursor: pointer;
+  }
+.flex{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+  .benefits{
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .grid{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }

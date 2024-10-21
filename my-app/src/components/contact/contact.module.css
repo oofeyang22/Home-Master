@@ -1,0 +1,43 @@
+.container{
+    padding: 0 1.5rem;
+    background-color: green;
+    
+    
+}
+
+.wrapper{
+    display: flex;
+    color: white;
+    gap: 30px;
+    justify-content: space-evenly;
+
+}
+
+.list{
+    list-style-type: none;
+    
+}
+
+.list li{
+    margin-bottom: 10px;
+}
+
+.info{
+    margin-top: 70px;
+}
+
+.title{
+    margin-bottom: 15px;
+    font-weight: bolder;
+}
+
+@media screen and (max-width: 768px){
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .info{
+        margin-top: 40px;
+    }
+}

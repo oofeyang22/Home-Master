@@ -1,0 +1,38 @@
+.container{
+    padding: 0 1.5rem;
+    display: flex;
+    margin-top: 30px;
+    gap: 300px;
+}
+.h1{
+    margin-bottom: 20px;
+}
+.imgContainer{
+    position: relative;
+    margin-top: 100px;
+}
+.img1, .img2{
+    border-radius: 10px;
+}
+
+.img1{
+    position: absolute;
+    top: 50px;
+    left: -36px;
+    z-index: 100;
+    rotate: -20deg;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 70px;
+    }
+    .imgContainer{
+        margin-top: 10px;
+    }
+}

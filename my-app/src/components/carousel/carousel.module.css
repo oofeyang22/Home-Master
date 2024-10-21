@@ -1,0 +1,174 @@
+.carouselContainer {
+    position: relative;
+    width: 80%;
+    max-width: 60vw;
+    margin: 0 auto;
+
+  }
+  
+  .carouselWrapper {
+    overflow: hidden;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carouselContent {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .carouselItem {
+    flex: 0 0 100%;
+    width: 100%;
+  }
+  
+  .carouselItemInner {
+    padding: 1.5rem;
+    background-color: green;
+    color: white;
+  }
+  
+  .carouselItemInner h2 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+  }
+  
+  .carouselItemInner p {
+    font-size: 0.875rem;
+  }
+  .flex{
+    display: flex;
+    gap: 50px;
+  }
+  .carouselButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: white;
+    border: none;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+  
+  .carouselButton:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .carouselButton.prev {
+    left: 0.5rem;
+  }
+  
+  .carouselButton.next {
+    right: 0.5rem;
+  }
+  
+  .carouselButton svg {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .carouselIndicators {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .carouselIndicator {
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 2px solid white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .carouselIndicator.active {
+    background-color: white;
+    border-color: black;
+  }
+.h1{
+  text-align: center;
+}
+  .content{
+    margin-bottom: 10px;
+  }
+  
+  @media (min-width: 640px) {
+    .carouselContainer {
+      max-width: 80vw;
+    }
+  
+    .carouselItemInner {
+      padding: 2rem;
+    }
+  
+    .carouselItemInner h2 {
+      font-size: 1.5rem;
+    }
+  
+    .carouselItemInner p {
+      font-size: 1rem;
+    }
+  
+    .carouselButton {
+      width: 3rem;
+      height: 3rem;
+    }
+  
+    .carouselButton.prev {
+      left: 1rem;
+    }
+  
+    .carouselButton.next {
+      right: 1rem;
+    }
+  
+    .carouselButton svg {
+      width: 1.75rem;
+      height: 1.75rem;
+    }
+  
+    .carouselIndicator {
+      width: 1rem;
+      height: 1rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .carouselContainer {
+      max-width: 70vw;
+    }
+  
+    .carouselItemInner {
+      padding: 2.5rem;
+    }
+  
+    .carouselItemInner h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+  
+    .carouselItemInner p {
+      font-size: 1.125rem;
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    .flex{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

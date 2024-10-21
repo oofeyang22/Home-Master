@@ -1,0 +1,17 @@
+.icon{
+    background-color: rgb(211, 53, 14);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    position: relative;
+    margin-bottom: 5px;
+
+}
+
+.work{
+    position: absolute;
+    bottom: 1px;
+    left: 6px;
+    z-index: 100;
+}
+

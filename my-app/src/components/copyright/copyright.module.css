@@ -1,0 +1,31 @@
+.container{
+    padding: 0 1.5rem;
+    background-color: #03c04a;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+}
+
+.info, .copy{
+    margin-top: 15px;
+}
+
+.info{
+    display: flex;
+    gap: 20px;
+}
+
+.flex{
+    display: flex;
+    gap: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .wrapper{
+        display: flex;
+        flex-direction: column;
+    }
+}
