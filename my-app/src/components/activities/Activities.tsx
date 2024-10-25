@@ -1,6 +1,8 @@
+"use client"
 import styles from "./activities.module.css"
 import Image from "next/image"
 import { MdArrowOutward } from "react-icons/md";
+import { motion } from "framer-motion";
 
 const activities = [
     {
@@ -36,7 +38,12 @@ const activities = [
 ]
 const Activities = () => {
     return (
-        <div className={styles.container}>
+        <motion.div className={styles.container}
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        >
             <h1 className={styles.pride}>We Take Pride for Our Services</h1>
             <div className={styles.boxContainer}>
                 {
@@ -61,7 +68,7 @@ const Activities = () => {
 
             </div>
 
-        </div>
+        </motion.div>
     )
 }
 

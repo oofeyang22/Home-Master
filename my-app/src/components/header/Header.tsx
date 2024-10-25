@@ -1,81 +1,3 @@
-/*"use client"
-
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { usePathname } from "next/navigation"
-import styles from './header.module.css';
-
-const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Project', href: '/project' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
-  { name: 'Contact', href: '/contact' },
-  { name: 'Blog', href: '/blog' },
-];
-
-const Header = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [hoveredItem, setHoveredItem] = useState<string | null>(null);
-  const pathName = usePathname();
-
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-
-  return (
-    <header className={styles.header}>
-      <div className={styles.container}>
-        <div className={styles.navbar}>
-          <div className={styles.logo}>
-            <Link href="/">Logo</Link>
-          </div>
-          <nav className={styles.desktopNav}>
-            {navItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className={`${styles.navLink} ${
-                  (pathName === item.href && hoveredItem === null) || hoveredItem === item.href
-                    ? styles.active
-                    : ''
-                }`}
-                onMouseEnter={() => setHoveredItem(item.href)}
-                onMouseLeave={() => setHoveredItem(null)}
-              >
-                {item.name}
-              </Link>
-            ))}
-          </nav>
-          <div className={styles.mobileNavToggle}>
-            <button onClick={toggleMenu} aria-label="Toggle menu">
-              {isMenuOpen ? '✕' : '☰'}
-            </button>
-          </div>
-        </div>
-      </div>
-      {isMenuOpen && (
-        <div className={styles.mobileNav}>
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={`${styles.mobileNavLink} ${
-                pathName === item.href ? styles.active : ''
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-      )}
-
-    </header>
-  );
-};
-
-export default Header;*/
-
-
 
 "use client"
 
@@ -84,6 +6,7 @@ import Link from 'next/link';
 import Navbar from '../navbar/Navbar';
 import styles from './header.module.css';
 import Image from 'next/image';
+import { motion } from "framer-motion";
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -102,7 +25,11 @@ const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.container}>
+      <motion.div className={styles.container}
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.3 }}
+      >
         <Navbar 
           navItems={navItems} 
           logo={<Link href="/">Home Masters</Link>}
@@ -123,7 +50,7 @@ const Header = () => {
             <Image src="/woman1.png" alt="woman" width={700} height={500}/>
           </div>
         </div>
-      </div>
+      </motion.div>
     </header>
   );
 };

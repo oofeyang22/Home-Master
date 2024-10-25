@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import styles from "./page.module.css";
 import Header from "@/components/header/Header";
@@ -13,6 +14,8 @@ import Carousel from "@/components/carousel/Carousel";
 import Dive from "@/components/dive/Dive";
 import Contact from "@/components/contact/Contact";
 import Copyright from "@/components/copyright/Copyright";
+import { motion } from "framer-motion";
+
 export default function Home() {
   return (
     <div className={styles.page}>

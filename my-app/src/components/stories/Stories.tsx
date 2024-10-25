@@ -1,9 +1,16 @@
+"use client"
 import Image from "next/image"
 import { Check } from "../check/Check"
 import styles from "./stories.module.css"
+import { motion } from "framer-motion";
 const Stories = () => {
     return (
-        <div className={styles.container}>
+        <motion.div className={styles.container}
+        initial={{ opacity: 0, x: -100 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 2 }}
+        viewport={{ once: true }}
+        >
             <div className={styles.imgContainer}>
                 <div ><Image src="/woman2.jpg" alt="woman2" width={400} height={350} className={styles.img1}/></div>
                 <div ><Image src="/woman4.jpg" alt="woman4" width={200} height={150} className={styles.img2}/></div>
@@ -35,7 +42,7 @@ const Stories = () => {
 
                 </div>
             </div>
-        </div>
+        </motion.div>
     )
 }
 
